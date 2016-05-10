@@ -1,0 +1,18 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd}
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd}
+
+vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4_TB.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  LFSR_4_TB
+
+add wave *
+view structure
+view signals
+run -all

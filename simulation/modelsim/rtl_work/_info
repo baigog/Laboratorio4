@@ -1,0 +1,367 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Mega/Facultad/FPGA/Laboratorio4/simulation/modelsim
+Econt4_updown
+Z1 w1462798809
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8E:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd
+Z6 FE:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd
+l0
+L5
+Vo3HVzOcOc:O]ldST[<9fn3
+!s100 S;F>akB4o^L?T6H8Y31DP3
+Z7 OV;C;10.4b;61
+31
+Z8 !s110 1462887777
+!i10b 1
+Z9 !s108 1462887777.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd|
+Z11 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1
+Abeh
+R2
+R3
+R4
+DEx4 work 12 cont4_updown 0 22 o3HVzOcOc:O]ldST[<9fn3
+l24
+L22
+V@CziheCM`<D4FghE^P>2:3
+!s100 =]R7BEI0Je[6Zj<T6?4M<2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econt7v2
+Z14 w1462800098
+R2
+R3
+R4
+R0
+Z15 8E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd
+Z16 FE:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd
+l0
+L5
+V5Zi89HOAOkgg=I?BT1fDz3
+!s100 hSg3lEfi[Y4?dPTcOOJKQ3
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd|
+Z18 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd|
+!i113 1
+R12
+R13
+Abeh
+R2
+R3
+R4
+DEx4 work 7 cont7v2 0 22 5Zi89HOAOkgg=I?BT1fDz3
+l87
+L19
+VkK1IVil:a=dz]LfQ9He?o1
+!s100 oS3F=M9NPJG`e`:@`_8Jf1
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Econt7v2_tb
+Z19 w1462801888
+R3
+R4
+R0
+Z20 8E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd
+Z21 FE:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd
+l0
+L4
+VCQHZ=EEbOWff9i7=DGLcj0
+!s100 ZZ:Mn2MUVGJ_2GiQ1nfUR2
+R7
+31
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd|
+Z23 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd|
+!i113 1
+R12
+R13
+Atest
+R3
+R4
+DEx4 work 10 cont7v2_tb 0 22 CQHZ=EEbOWff9i7=DGLcj0
+l27
+L7
+V<I]NS7D8`Pleg6LUcFN?i0
+!s100 GoYJD:7;c_Odo6<mZlPMc3
+R7
+31
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Econt_7seg
+Z24 w1462755096
+R3
+R4
+R0
+Z25 8E:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd
+Z26 FE:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd
+l0
+L4
+VY<AH6KBFSJc@:^]kG<OBV0
+!s100 N]ZPlCO?;A=a6Y?5?a21<0
+R7
+31
+Z27 !s110 1462887776
+!i10b 1
+Z28 !s108 1462887776.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd|
+Z30 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd|
+!i113 1
+R12
+R13
+Ainterna
+R3
+R4
+DEx4 work 9 cont_7seg 0 22 Y<AH6KBFSJc@:^]kG<OBV0
+l41
+L21
+Vhn22?=;d4@MdWoKlN]=6S3
+!s100 l30j83EzCh87Bl<R`XTb^0
+R7
+31
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R12
+R13
+Edec_hex_7seg
+Z31 w1460156945
+R3
+R4
+R0
+Z32 8E:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd
+Z33 FE:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd
+l0
+L4
+VjgNgn[k8?fZ^m18o;bSTJ0
+!s100 ;;Sjln9^P[Zz<_n9:z_3I1
+R7
+31
+R27
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd|
+Z35 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd|
+!i113 1
+R12
+R13
+Adecod
+R3
+R4
+DEx4 work 12 dec_hex_7seg 0 22 jgNgn[k8?fZ^m18o;bSTJ0
+l17
+L16
+V`hk[;XV;5DbWmBOjklOZ`2
+!s100 4mLEQ3CXd1cQ8j6BjUG9R2
+R7
+31
+R27
+!i10b 1
+R28
+R34
+R35
+!i113 1
+R12
+R13
+Edf_hz
+Z36 w1462800101
+R2
+R3
+R4
+R0
+Z37 8E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd
+Z38 FE:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd
+l0
+L5
+VGcVXWPJNbSN<<M`g^`m;E3
+!s100 _hC1k;ZjY]AzaTC07BUjj3
+R7
+31
+R27
+!i10b 1
+R28
+Z39 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd|
+Z40 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd|
+!i113 1
+R12
+R13
+Abeh
+R2
+R3
+R4
+DEx4 work 5 df_hz 0 22 GcVXWPJNbSN<<M`g^`m;E3
+l58
+L24
+V@i5f0Eb0444]RSo^cS2gb1
+!s100 zf8A?;hR1e6i@IcObJYQg3
+R7
+31
+R27
+!i10b 1
+R28
+R39
+R40
+!i113 1
+R12
+R13
+Eff_d
+Z41 w1462755322
+R3
+R4
+R0
+Z42 8E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd
+Z43 FE:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd
+l0
+L5
+Vgo>0kioTAcE]Fd0Vb<BbB3
+!s100 WWY^7mb<C:[GM3RGHBUcV1
+R7
+31
+R27
+!i10b 1
+R28
+Z44 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd|
+Z45 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd|
+!i113 1
+R12
+R13
+Aflow
+R3
+R4
+DEx4 work 4 ff_d 0 22 go>0kioTAcE]Fd0Vb<BbB3
+l19
+L18
+V?3?fVb4RZlGM25MUkCeNd2
+!s100 ?UzZYJn<@B:am^@PkU=hC3
+R7
+31
+R27
+!i10b 1
+R28
+R44
+R45
+!i113 1
+R12
+R13
+Elfsr_4
+Z46 w1462755275
+R3
+R4
+R0
+Z47 8E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd
+Z48 FE:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd
+l0
+L5
+V25klnoE6RdgCPS9LJ8_Pi1
+!s100 RbzV3aFX1HLcUbZSn_bI<3
+R7
+31
+R8
+!i10b 1
+R9
+Z49 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd|
+Z50 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd|
+!i113 1
+R12
+R13
+Ashift
+R3
+R4
+DEx4 work 6 lfsr_4 0 22 25klnoE6RdgCPS9LJ8_Pi1
+l35
+L17
+V=bAFmQ]cliS:`69IU7Nm^2
+!s100 gO<ETEID;V7SROb=f`QkA3
+R7
+31
+R8
+!i10b 1
+R9
+R49
+R50
+!i113 1
+R12
+R13
+Emux_4_1
+Z51 w1462754935
+R3
+R4
+R0
+Z52 8E:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd
+Z53 FE:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd
+l0
+L4
+VmQEh5EgEMgQYbGXWlTYPJ0
+!s100 YGUXlD[lK9g_Io90V?LYJ1
+R7
+31
+R27
+!i10b 1
+R28
+Z54 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd|
+Z55 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd|
+!i113 1
+R12
+R13
+Aflujo
+R3
+R4
+DEx4 work 7 mux_4_1 0 22 mQEh5EgEMgQYbGXWlTYPJ0
+l14
+L13
+Vhni8jXB=zIO<HUXWgZ=1F1
+!s100 I]6DjM;j?@ecCzF<U`=;I3
+R7
+31
+R27
+!i10b 1
+R28
+R54
+R55
+!i113 1
+R12
+R13

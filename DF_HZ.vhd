@@ -1,0 +1,109 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity DF_HZ is
+	generic
+	(
+		freq:	integer	:=	50000000
+		
+	);
+	port(
+		CLKin: 	in	std_logic;
+		rst:		in	std_logic;
+		SelFreq:	in	std_logic_vector(2 downto 0);
+		
+		CLKout: 		out std_logic;
+		LEDout: 		out std_logic;
+		display1:	out std_logic_vector(6 downto 0);
+		display0:	out std_logic_vector(6 downto 0)
+	
+	);
+end DF_HZ;
+
+architecture beh of DF_HZ is
+
+	function Log2( input:integer ) return integer is
+		variable temp,log:integer;
+	begin
+		temp:=input;
+		log:=0;
+		while (temp /= 0) loop
+		temp:=temp/2;
+		log:=log+1;
+   end loop;
+   return log;
+	end function log2;
+	
+	constant PS_01HZ: 	integer := freq*5;
+	constant PS_05HZ: 	integer := freq;	
+	constant PS_1HZ: 		integer := freq/2;
+	constant PS_2HZ: 		integer := freq/4;
+	constant PS_5HZ: 		integer := freq/10;
+	constant PS_1MHZ: 	integer := freq/2000000;	--A fines de simulación
+	constant nbits:		integer := Log2(PS_01HZ);
+	signal prescaler,count:	unsigned(nbits downto 0);
+	signal Clk_aux:		std_logic;
+	
+	component DEC_HEX_7SEG is
+	port(
+		in1	: in  std_logic_vector(3 downto 0);
+		out1	: out std_logic_vector(6 downto 0)
+		);
+	end component;
+	
+	signal display: std_logic_vector(7 downto 0);
+	
+	
+begin
+
+freq_div: process (clkin,rst)
+
+begin
+	if(rst='1') then
+		Clk_aux <= '0';
+		count <= (others => '0');
+		elsif	rising_edge(Clkin) then
+			if (count = prescaler) then
+				count <= (others=>'0');
+				Clk_aux <= not Clk_aux;
+			else
+				count <= count+"1";
+			end if;
+	end if;
+end process freq_div;
+
+
+sinc_entradas: process (SelFreq,clkin)
+begin
+	if rising_edge(clkin) then
+		case SelFreq is
+			when "000" => 
+				prescaler <= to_unsigned(PS_01HZ,nbits+1);
+				display <= "00000001";
+			when "001" =>
+				prescaler <= to_unsigned(PS_05HZ,nbits+1);
+				display <= "00000101";
+			when "010" =>
+				prescaler <= to_unsigned(PS_2HZ,nbits+1);
+				display <= "00100000";
+			when "011" =>
+				prescaler <= to_unsigned(PS_5HZ,nbits+1);
+				display <= "01010000";
+			when "111" =>
+				prescaler <= to_unsigned(PS_1MHZ,nbits+1);		--A fines de simulación
+				display <= "11111111";
+			when others =>
+				prescaler <= to_unsigned(PS_1HZ,nbits+1);
+				display <= "00010000";
+		end case;
+	end if;
+end process sinc_entradas;
+
+clkout<=clk_aux;
+LEDout<=clk_aux;
+
+DEC1:DEC_HEX_7SEG port map(in1=>display(7 downto 4),out1=>display1);
+DEC0:DEC_HEX_7SEG port map(in1=>display(3 downto 0),out1=>display0);
+
+end beh;

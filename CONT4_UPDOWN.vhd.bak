@@ -1,0 +1,42 @@
+library ieee; 
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity CONT4_UPDOWN is
+	port
+	(
+		-- Input ports
+		Clk	: in  std_logic;
+		UPDOWN: in	std_logic;
+		EN		: in	std_logic;
+		X2		: in	std_logic;
+		
+
+		-- Output ports
+		b	: out std_logic_vector(3 downto 0)
+	);
+end CONT4_UPDOWN;
+
+architecture beh of CONT4_UPDOWN is
+	signal aux : unsigned(4 downto 0) := (others => '0');
+begin
+	clock_event: process (Clk)
+	begin
+		if(rising_edge(Clk)) then
+			if(EN='1') then
+				if(UPDOWN='1') then
+					aux:=aux+1;
+					if(X2='1') then
+						aux:=aux+1;
+					end if;
+					else
+					aux:=aux-1;
+					if(X2='1') then
+						aux:=aux-1;
+					end if;
+				end if;
+			end if;	
+		end if;
+		b = std_logic_vector(aux);
+	end process;
+end beh
