@@ -1,5 +1,5 @@
 Flow report for prueba_generic
-Tue May 10 10:44:40 2016
+Wed May 11 12:26:23 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue May 10 10:44:40 2016       ;
+; Flow Status                        ; Successful - Wed May 11 12:09:17 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; prueba_generic                              ;
-; Top-level Entity Name              ; CONT7V2                                     ;
+; Top-level Entity Name              ; DF_HZ                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 86 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 79 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 52 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 52                                          ;
-; Total pins                         ; 12 / 529 ( 2 % )                            ;
+; Total logic elements               ; 65 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 62 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 38 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 21 / 529 ( 4 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/10/2016 10:43:33 ;
+; Start date & time ; 05/11/2016 12:08:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; prueba_generic      ;
 +-------------------+---------------------+
@@ -76,14 +76,14 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value  ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146288781313320        ; --             ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146297929015356        ; --             ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; CONT4_UPDOWN_TB ;
 ; EDA_DESIGN_INSTANCE_NAME             ; LFSR1                                 ; --             ; --          ; LFSR_4_TB       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; DF_HZ_PLL_TB    ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; DF_HZ_TB        ;
+; EDA_DESIGN_INSTANCE_NAME             ; DF1                                   ; --             ; --          ; DF_HZ_TB        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; PLL_TB          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; CONT7V2_TB      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; CONT7V2_TB                            ; --             ; --          ; eda_simulation  ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; DF_HZ_TB                              ; --             ; --          ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --             ; --          ; eda_simulation  ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                ; <None>         ; --          ; --              ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --             ; --          ; eda_simulation  ;
@@ -112,13 +112,13 @@ agreement for further details.
 ; MISC_FILE                            ; PLL/PLL.cmp                           ; --             ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL.ppf                           ; --             ; --          ; --              ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --             ; --          ; --              ;
-; PARTITION_COLOR                      ; 16764057                              ; --             ; CONT7V2     ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; CONT7V2     ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; CONT7V2     ; Top             ;
+; PARTITION_COLOR                      ; 16764057                              ; --             ; DF_HZ       ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; DF_HZ       ; Top             ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; DF_HZ       ; Top             ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --             ; --          ; --              ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --             ; --          ; --              ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --             ; --          ; --              ;
-; TOP_LEVEL_ENTITY                     ; CONT7V2                               ; prueba_generic ; --          ; --              ;
+; TOP_LEVEL_ENTITY                     ; DF_HZ                                 ; prueba_generic ; --          ; --              ;
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
 
 
@@ -127,12 +127,14 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 866 MB              ; 00:00:38                           ;
-; Fitter                    ; 00:00:22     ; 1.0                     ; 1320 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 739 MB              ; 00:00:06                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 872 MB              ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 704 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:48     ; --                      ; --                  ; 00:01:14                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 854 MB              ; 00:00:37                           ;
+; Fitter                    ; 00:00:21     ; 1.0                     ; 1322 MB             ; 00:00:24                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 740 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 869 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 706 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 852 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 853 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:15                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -146,6 +148,8 @@ agreement for further details.
 ; Assembler                 ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -157,6 +161,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off Laboratorio4 -c
 quartus_asm --read_settings_files=off --write_settings_files=off Laboratorio4 -c prueba_generic
 quartus_sta Laboratorio4 -c prueba_generic
 quartus_eda --read_settings_files=off --write_settings_files=off Laboratorio4 -c prueba_generic
+quartus_sta Laboratorio4 -c prueba_generic
+quartus_sta Laboratorio4 -c prueba_generic
 
 
 

@@ -1,156 +1,96 @@
-# do prueba_generic_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
+# do prueba_generic_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
 # }
-# Error 133: Unable to remove directory "E:/Mega/Facultad/FPGA/Laboratorio4/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
+# Error 133: Unable to remove directory "E:/Mega/Facultad/FPGA/Laboratorio4/simulation/modelsim/gate_work".
+# vlib gate_work
+# ** Error: (vlib-35) Failed to create directory "gate_work".
 # 
 # File exists. (errno = EEXIST)
-# vmap work rtl_work
+# vmap work gate_work
 # Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
-# vmap -modelsim_quiet work rtl_work 
+# vmap -modelsim_quiet work gate_work 
 # Copying C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # ** Warning: Copied C:/altera_lite/15.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd}
+# vcom -93 -work work {prueba_generic_7_1200mv_85c_slow.vho}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:56 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/MUX_4_1.vhd 
+# Start time: 11:33:03 on May 11,2016
+# vcom -reportprogress 300 -93 -work work prueba_generic_7_1200mv_85c_slow.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity MUX_4_1
-# -- Compiling architecture flujo of MUX_4_1
-# End time: 10:42:56 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:56 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/CONT_7SEG.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CONT_7SEG
-# -- Compiling architecture interna of CONT_7SEG
-# End time: 10:42:56 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:56 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
 # -- Compiling entity DF_HZ
-# -- Compiling architecture beh of DF_HZ
-# End time: 10:42:56 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:56 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/DEC_HEX_7SEG.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity DEC_HEX_7SEG
-# -- Compiling architecture DECOD of DEC_HEX_7SEG
-# End time: 10:42:56 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:56 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/FF_D.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FF_D
-# -- Compiling architecture flow of FF_D
-# End time: 10:42:57 on May 10,2016, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:57 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/LFSR_4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LFSR_4
-# -- Compiling architecture shift of LFSR_4
-# End time: 10:42:57 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:57 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/CONT4_UPDOWN.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CONT4_UPDOWN
-# -- Compiling architecture beh of CONT4_UPDOWN
-# End time: 10:42:57 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd}
-# Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:57 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CONT7V2
-# -- Compiling architecture beh of CONT7V2
-# End time: 10:42:57 on May 10,2016, Elapsed time: 0:00:00
+# -- Compiling architecture structure of DF_HZ
+# End time: 11:33:03 on May 11,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd}
+# vcom -93 -work work {E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd}
 # Model Technology ModelSim ALTERA vcom 10.4b Compiler 2015.05 May 27 2015
-# Start time: 10:42:57 on May 10,2016
-# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd 
+# Start time: 11:33:03 on May 11,2016
+# vcom -reportprogress 300 -93 -work work E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity CONT7V2_TB
-# -- Compiling architecture test of CONT7V2_TB
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(30): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(36): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(39): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(41): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd(45): (vcom-1207) An abstract literal and an identifier must have a separator between them.
-# End time: 10:42:57 on May 10,2016, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 6
+# -- Compiling entity DF_HZ_TB
+# -- Compiling architecture test of DF_HZ_TB
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd(38): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# ** Warning: E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd(44): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 11:33:03 on May 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  CONT7V2_TB
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" CONT7V2_TB 
-# Start time: 10:42:58 on May 10,2016
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /DF1=prueba_generic_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs="+acc"  DF_HZ_TB
+# vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -sdftyp /DF1=prueba_generic_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneive -L gate_work -L work -voptargs=""+acc"" DF_HZ_TB 
+# Start time: 11:33:03 on May 11,2016
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.cont7v2_tb(test)
-# Loading ieee.numeric_std(body)
-# Loading work.cont7v2(beh)
-# Loading work.cont_7seg(interna)
-# Loading work.mux_4_1(flujo)
-# Loading work.dec_hex_7seg(decod)
-# Loading work.lfsr_4(shift)
-# Loading work.ff_d(flow)
-# Loading work.cont4_updown(beh)
-# Loading work.df_hz(beh)
+# Loading work.df_hz_tb(test)
+# SDF 10.4b Compiler 2015.05 May 27 2015
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.df_hz(structure)
+# ** Warning: (vsim-8713) E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd(36): Suspect default binding for component instance 'DF1'.
+# 
+#    Entity has no generics at all; the component has generic:
+#           freq
+#    Time: 0 ps  Iteration: 0  Instance: /df_hz_tb/DF1 File: prueba_generic_7_1200mv_85c_slow.vho
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading instances from prueba_generic_7_1200mv_85c_vhd_slow.sdo
+# Loading timing data from prueba_generic_7_1200mv_85c_vhd_slow.sdo
+# ** Warning: Design size of 15656 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /df_hz_tb File: E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Mochi  Hostname: GABRIEL  ProcessID: 11244
 # 
-#           Attempting to use alternate WLF file "./wlfthqsatd".
+#           Attempting to use alternate WLF file "./wlft5fz4yc".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlfthqsatd
+#           Using alternate file: ./wlft5fz4yc
 # 
 # view structure
 # .main_pane.structure.interior.cs.body.struct
@@ -158,7 +98,7 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Failure: FIN
-#    Time: 57010 ns  Iteration: 0  Process: /cont7v2_tb/aplica_entradas File: E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd
-# Break in Process aplica_entradas at E:/Mega/Facultad/FPGA/Laboratorio4/CONT7V2_TB.vhd line 46
-# End time: 10:43:15 on May 10,2016, Elapsed time: 0:00:17
-# Errors: 0, Warnings: 2
+#    Time: 13019098 ps  Iteration: 2  Process: /df_hz_tb/aplica_entradas File: E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd
+# Break in Process aplica_entradas at E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd line 56
+# End time: 11:38:07 on May 11,2016, Elapsed time: 0:05:04
+# Errors: 0, Warnings: 4

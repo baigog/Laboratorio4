@@ -33,22 +33,25 @@ architecture test of DF_HZ_TB is
 	
 begin
 
-	DF1: DF_HZ generic map(freq=>1200) port map(CLKin=>CLKin,rst=>rst,SelFreq=>SelFreq,CLKout=>CLKout,LEDout=>open,display1=>open,display0=>open);
+	DF1: DF_HZ generic map(freq=>50000000) port map(CLKin=>CLKin,rst=>rst,SelFreq=>SelFreq,CLKout=>CLKout,LEDout=>open,display1=>open,display0=>open);
 	
-	CLKin<= not(CLKin) after 416.66us;
+	CLKin<= not(CLKin) after 10ns;
 	
 	aplica_entradas: process
 		begin
-		rst <='1';
-		SELFreq<="011";
-		wait for 1ms;
-		rst <='0';
-		wait for 500ms;
-		rst <='1';
+		rst <= '1';
+		SELFreq<="000";
+		wait for 10ns;
+		rst <= '0';
+		wait until falling_edge(ClkOut);
+		SELFreq<="001";
+		--for i in 1 to 100 loop
+			wait until falling_edge(Clkout);
+		--end loop;
 		SELFreq<="010";
-		wait for 1ms;
-		rst <='0';
-		wait for 1000ms;
+		--for i in 1 to 100 loop
+			wait until falling_edge(CLKout);
+		--end loop;
 		assert(false)
 			report "FIN" severity failure;
 	end process aplica_entradas;

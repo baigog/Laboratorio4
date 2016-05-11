@@ -1,15 +1,16 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-
+--use ieee.numeric_std.all;
+--Contador LFSR/UP/DOWN/UP (X2) con entrada selectora y frecuencia de salida de 1Hz, se debe ingresar con 50MHz.
+--Posee entrada de habilitación y reseteo.
 entity CONT7V2 is
 	port
 	(
 		-- Input ports
-		CLK	: in	std_logic;
-		Rst	: in	std_logic;
-		EN		: in	std_logic;
-		SEL	: in	std_logic_vector(1 downto 0);
+		CLK	: in	std_logic;								--Reloj de entrada
+		Rst	: in	std_logic;								--Reset asincrónico
+		EN		: in	std_logic;								--Entrada de habilitación (no afecta a LFSR)
+		SEL	: in	std_logic_vector(1 downto 0);		--Entrada selectora
 
 		-- Output ports
 		out1	: out std_logic_vector(6 downto 0)
@@ -100,7 +101,7 @@ begin
 			b		=>	lfsraux
 		);
 	
-	CONT1			:	CONT4_UPDOWN port map(
+	CONT1			:	CONT4_UPDOWN port map(		--Contador UP
 		Clk		=>	Clkaux,
 		UPDOWN 	=>	'1',
 		EN			=>	EN,
@@ -110,7 +111,7 @@ begin
 		ovf		=>	open
 	);
 		
-	CONT2			:	CONT4_UPDOWN port map(
+	CONT2			:	CONT4_UPDOWN port map(		--Contador DOWN
 		Clk		=>	Clkaux,
 		UPDOWN 	=>	'0',
 		EN			=>	EN,
@@ -120,7 +121,7 @@ begin
 		ovf		=>	open
 	);
 		
-	CONT3			:	CONT4_UPDOWN port map(
+	CONT3			:	CONT4_UPDOWN port map(		--Contador UP 2X
 		Clk		=>	Clkaux,
 		UPDOWN 	=>	'1',
 		EN			=>	EN,

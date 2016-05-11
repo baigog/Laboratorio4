@@ -1,6 +1,8 @@
 library ieee; 
 use ieee.std_logic_1164.all;
---use ieee.numeric_std.all;
+
+--CONTADOR LINEAR FEEDBACK SHIFT REGISTER.
+--Cuenta una secuencia pseudoaleatoria de 4 bits cíclica de 15 estados.  Posee una entrada de seteo.
 
 entity LFSR_4 is
 	port
