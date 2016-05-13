@@ -61,7 +61,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME LFSR_4_TB -section_id LFS
 set_global_assignment -name EDA_TEST_BENCH_NAME CONT4_UPDOWN_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CONT4_UPDOWN_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CONT4_UPDOWN_TB -section_id CONT4_UPDOWN_TB
-set_location_assignment PIN_Y2 -to CLKin
 set_location_assignment PIN_AE23 -to CLKout
 set_location_assignment PIN_H22 -to display0[6]
 set_location_assignment PIN_J22 -to display0[5]
@@ -77,10 +76,6 @@ set_location_assignment PIN_W22 -to display1[3]
 set_location_assignment PIN_W21 -to display1[2]
 set_location_assignment PIN_Y22 -to display1[1]
 set_location_assignment PIN_M24 -to display1[0]
-set_location_assignment PIN_AB28 -to SelFreq[0]
-set_location_assignment PIN_AD27 -to rst
-set_location_assignment PIN_AC27 -to SelFreq[2]
-set_location_assignment PIN_AC28 -to SelFreq[1]
 set_location_assignment PIN_E21 -to LEDout
 set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
@@ -93,36 +88,12 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DF_HZ_PLL_TB -section_id 
 set_global_assignment -name EDA_TEST_BENCH_NAME DF_HZ_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME DF1 -section_id DF_HZ_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DF_HZ_TB -section_id DF_HZ_TB
-set_location_assignment PIN_AB28 -to SEL[0]
-set_location_assignment PIN_Y2 -to CLK
-set_location_assignment PIN_AC27 -to EN
-set_location_assignment PIN_AD27 -to Rst
-set_location_assignment PIN_AC28 -to SEL[1]
-set_location_assignment PIN_G18 -to out1[6]
-set_location_assignment PIN_F22 -to out1[5]
-set_location_assignment PIN_E17 -to out1[4]
-set_location_assignment PIN_L26 -to out1[3]
-set_location_assignment PIN_L25 -to out1[2]
 set_global_assignment -name EDA_TEST_BENCH_NAME CONT7V2_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CONT7V2_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CONT7V2_TB -section_id CONT7V2_TB
-set_location_assignment PIN_J22 -to out1[1]
-set_location_assignment PIN_H22 -to out1[0]
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name IO_STANDARD "2.5 V" -to CLK
-set_instance_assignment -name IO_STANDARD "2.5 V" -to EN
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[6]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[5]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[4]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[3]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[2]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to out1[0]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to Rst
-set_instance_assignment -name IO_STANDARD "2.5 V" -to SEL[1]
-set_instance_assignment -name IO_STANDARD "2.5 V" -to SEL[0]
 set_global_assignment -name EDA_TEST_BENCH_FILE LFSR_4_TB.vhd -section_id LFSR_4_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE CONT4_UPDOWN_TB.vhd -section_id CONT4_UPDOWN_TB
 set_global_assignment -name EDA_TEST_BENCH_FILE PLL_TB.vhd -section_id PLL_TB
@@ -145,4 +116,5 @@ set_global_assignment -name QIP_FILE PLL/pll.qip
 set_global_assignment -name VHDL_FILE PLL_TB.vhd
 set_global_assignment -name VHDL_FILE CONT7V2.vhd
 set_global_assignment -name VHDL_FILE CONT7V2_TB.vhd
+set_location_assignment PIN_Y2 -to clkin
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

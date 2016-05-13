@@ -140,3 +140,14 @@ run -continue
 # Break key hit
 # Simulation stop requested.
 run -continue
+# Break key hit
+# Simulation stop requested.
+run -continue
+# Break key hit
+# Simulation stop requested.
+run -continue
+# ** Failure: FIN
+#    Time: 14583343333 ps  Iteration: 11  Process: /df_hz_pll_tb/aplica_entradas File: E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd
+# Break in Process aplica_entradas at E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd line 58
+# End time: 11:45:37 on May 13,2016, Elapsed time: 0:41:52
+# Errors: 0, Warnings: 5
