@@ -5,24 +5,24 @@ SelFreq[1] => DF_HZ:DF1.SelFreq[1]
 SelFreq[2] => DF_HZ:DF1.SelFreq[2]
 rstPLL => PLL:PLL1.areset
 rstDF => DF_HZ:DF1.rst
-CLKout <= DF_HZ:DF1.CLKout
-CLKaux <= PLL:PLL1.c0
-LEDout <= DF_HZ:DF1.LEDout
-locked <= PLL:PLL1.locked
-display1[0] <= DF_HZ:DF1.display1[0]
-display1[1] <= DF_HZ:DF1.display1[1]
-display1[2] <= DF_HZ:DF1.display1[2]
-display1[3] <= DF_HZ:DF1.display1[3]
-display1[4] <= DF_HZ:DF1.display1[4]
-display1[5] <= DF_HZ:DF1.display1[5]
-display1[6] <= DF_HZ:DF1.display1[6]
-display0[0] <= DF_HZ:DF1.display0[0]
-display0[1] <= DF_HZ:DF1.display0[1]
-display0[2] <= DF_HZ:DF1.display0[2]
-display0[3] <= DF_HZ:DF1.display0[3]
-display0[4] <= DF_HZ:DF1.display0[4]
-display0[5] <= DF_HZ:DF1.display0[5]
-display0[6] <= DF_HZ:DF1.display0[6]
+CLKout << DF_HZ:DF1.CLKout
+CLKaux << PLL:PLL1.c0
+LEDout << DF_HZ:DF1.LEDout
+locked << PLL:PLL1.locked
+display1[0] << DF_HZ:DF1.display1[0]
+display1[1] << DF_HZ:DF1.display1[1]
+display1[2] << DF_HZ:DF1.display1[2]
+display1[3] << DF_HZ:DF1.display1[3]
+display1[4] << DF_HZ:DF1.display1[4]
+display1[5] << DF_HZ:DF1.display1[5]
+display1[6] << DF_HZ:DF1.display1[6]
+display0[0] << DF_HZ:DF1.display0[0]
+display0[1] << DF_HZ:DF1.display0[1]
+display0[2] << DF_HZ:DF1.display0[2]
+display0[3] << DF_HZ:DF1.display0[3]
+display0[4] << DF_HZ:DF1.display0[4]
+display0[5] << DF_HZ:DF1.display0[5]
+display0[6] << DF_HZ:DF1.display0[6]
 
 
 |DF_HZ_PLL|PLL:PLL1
