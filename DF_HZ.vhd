@@ -45,8 +45,11 @@ architecture beh of DF_HZ is
 	constant PS_2HZ: 		integer := freq/4-1;		--Constante prescaler de 2Hz
 	constant PS_5HZ: 		integer := freq/10-1;		--Constante prescaler de 5Hz
 	constant PS_1MHZ: 	integer := freq/2000000-1;--Constante de 1MHz a fines de simulación
-	constant PS_500KHZ: 	integer := freq/1000000-1;--Constante de 1MHz a fines de simulación
-	constant PS_100KHZ: 	integer := freq/200000-1;	--Constante de 1MHz a fines de simulación
+	constant PS_500KHZ: 	integer := freq/1000000-1;--Constante de 500KHz a fines de simulación
+	constant PS_100KHZ: 	integer := freq/200000-1;	--Constante de 100KHz a fines de simulación
+	constant PS_600HZ: 	integer := freq/600-1;		--Constante de 1KHz a fines de simulación
+	constant PS_400HZ: 	integer := freq/400-1;		--Constante de 1KHz a fines de simulación
+	constant PS_300HZ: 	integer := freq/300-1;		--Constante de 1KHz a fines de simulación
 	constant nbits:		integer := Log2(PS_01HZ);
 	signal prescaler,count:	unsigned(nbits downto 0);
 	signal Clk_aux:		std_logic;
@@ -86,16 +89,14 @@ begin
 	if rising_edge(clkin) then
 		case SelFreq is
 			when "000" => 
-				prescaler <= to_unsigned(PS_1MHZ,nbits+1);
+				prescaler <= to_unsigned(PS_600HZ,nbits+1);
 				display <= "00000001";
 			when "001" =>
-				prescaler <= to_unsigned(PS_500KHZ,nbits+1);
+				prescaler <= to_unsigned(PS_400HZ,nbits+1);
 				display <= "00000101";
 			when "010" =>
-				prescaler <= to_unsigned(PS_100KHZ,nbits+1);
+				prescaler <= to_unsigned(PS_300HZ,nbits+1);
 				display <= "00100000";
-			when "011" =>
-				prescaler <= to_unsigned(PS_5HZ,nbits+1);
 				display <= "01010000";
 			when others =>
 				prescaler <= to_unsigned(PS_1HZ,nbits+1);

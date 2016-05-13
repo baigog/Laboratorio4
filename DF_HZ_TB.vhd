@@ -45,15 +45,10 @@ begin
 		rst <= '0';
 		wait until falling_edge(ClkOut);
 		SELFreq<="001";
-		--for i in 1 to 100 loop
-			wait until falling_edge(Clkout);
-		--end loop;
+		wait until falling_edge(Clkout);
 		SELFreq<="010";
-		--for i in 1 to 100 loop
-			wait until falling_edge(CLKout);
-		--end loop;
-		assert(false)
-			report "FIN" severity failure;
+		wait until falling_edge(CLKout);
+		assert(false) report "FIN" severity failure;
 	end process aplica_entradas;
 
 end test;

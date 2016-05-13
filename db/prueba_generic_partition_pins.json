@@ -64,14 +64,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "CLKin",
-					"strict" : false
-				},
-				{
-					"name" : "rst",
-					"strict" : false
-				},
-				{
 					"name" : "SelFreq[2]",
 					"strict" : false
 				},

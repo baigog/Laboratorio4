@@ -20,7 +20,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
-## DATE    "Wed May 11 12:30:35 2016"
+## DATE    "Wed May 11 21:15:19 2016"
 
 ##
 ## DEVICE  "EP4CE115F29C7"
@@ -39,7 +39,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {Clkin} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLKin}]
+create_clock -name {ClkIn} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLKin}]
 
 
 #**************************************************************
