@@ -1,6 +1,5 @@
 library ieee; 
 use ieee.std_logic_1164.all;
---use ieee.numeric_std.all;
 --Contador LFSR/UP/DOWN/UP (X2) con entrada selectora y frecuencia de salida de 1Hz, se debe ingresar con 50MHz.
 --Posee entrada de habilitación y reseteo.
 entity CONT7V2 is

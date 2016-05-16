@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-
+--Codigo Test-Bench para el componente DF_HZ
 entity DF_HZ_TB is
 
 end DF_HZ_TB;
@@ -43,7 +43,7 @@ begin
 		SELFreq<="000";
 		wait for 10ns;
 		rst <= '0';
-		wait until falling_edge(ClkOut);
+		wait until falling_edge(ClkOut);		--Se espera un ciclo de la salida
 		SELFreq<="001";
 		wait until falling_edge(Clkout);
 		SELFreq<="010";

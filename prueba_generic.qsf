@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY DF_HZ_PLL
+set_global_assignment -name TOP_LEVEL_ENTITY CONT7V2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:21:41  MAY 05, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
@@ -83,7 +83,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME PLL_TB -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id PLL_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME PLL_TB -section_id PLL_TB
 set_global_assignment -name EDA_TEST_BENCH_NAME DF_HZ_PLL_TB -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id DF_HZ_PLL_TB
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME DFPLL1 -section_id DF_HZ_PLL_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DF_HZ_PLL_TB -section_id DF_HZ_PLL_TB
 set_global_assignment -name EDA_TEST_BENCH_NAME DF_HZ_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME DF1 -section_id DF_HZ_TB
@@ -91,15 +91,6 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME DF_HZ_TB -section_id DF_H
 set_global_assignment -name EDA_TEST_BENCH_NAME CONT7V2_TB -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CONT7V2_TB
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CONT7V2_TB -section_id CONT7V2_TB
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE LFSR_4_TB.vhd -section_id LFSR_4_TB
-set_global_assignment -name EDA_TEST_BENCH_FILE CONT4_UPDOWN_TB.vhd -section_id CONT4_UPDOWN_TB
-set_global_assignment -name EDA_TEST_BENCH_FILE PLL_TB.vhd -section_id PLL_TB
-set_global_assignment -name EDA_TEST_BENCH_FILE DF_HZ_PLL_TB.vhd -section_id DF_HZ_PLL_TB
-set_global_assignment -name EDA_TEST_BENCH_FILE DF_HZ_TB.vhd -section_id DF_HZ_TB
-set_global_assignment -name EDA_TEST_BENCH_FILE CONT7V2_TB.vhd -section_id CONT7V2_TB
 set_global_assignment -name VHDL_FILE MUX_4_1.vhd
 set_global_assignment -name VHDL_FILE CONT_7SEG.vhd
 set_global_assignment -name VHDL_FILE DF_HZ_PLL_TB.vhd
@@ -117,4 +108,13 @@ set_global_assignment -name VHDL_FILE PLL_TB.vhd
 set_global_assignment -name VHDL_FILE CONT7V2.vhd
 set_global_assignment -name VHDL_FILE CONT7V2_TB.vhd
 set_location_assignment PIN_Y2 -to clkin
+set_global_assignment -name EDA_TEST_BENCH_FILE LFSR_4_TB.vhd -section_id LFSR_4_TB
+set_global_assignment -name EDA_TEST_BENCH_FILE CONT4_UPDOWN_TB.vhd -section_id CONT4_UPDOWN_TB
+set_global_assignment -name EDA_TEST_BENCH_FILE PLL_TB.vhd -section_id PLL_TB
+set_global_assignment -name EDA_TEST_BENCH_FILE DF_HZ_PLL_TB.vhd -section_id DF_HZ_PLL_TB
+set_global_assignment -name EDA_TEST_BENCH_FILE DF_HZ_TB.vhd -section_id DF_HZ_TB
+set_global_assignment -name EDA_TEST_BENCH_FILE CONT7V2_TB.vhd -section_id CONT7V2_TB
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-
+--Test-Bench de DF_HZ_PLL
 entity DF_HZ_PLL_TB is
 
 end DF_HZ_PLL_TB;
@@ -48,9 +48,8 @@ begin
 		begin
 		SELFreq<="000";
 		rstPLL<='0';
-		wait until rising_edge(locked);
 		rstDF<='0';
-		wait until falling_edge(Clkout);
+		wait until falling_edge(Clkout);		--Se espera un período de salida
 		SELFreq<="001";
 		wait until falling_edge(Clkout);
 		SELFreq<="010";

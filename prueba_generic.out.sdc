@@ -20,7 +20,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
 
-## DATE    "Wed May 11 21:15:19 2016"
+## DATE    "Mon May 16 11:25:27 2016"
 
 ##
 ## DEVICE  "EP4CE115F29C7"
@@ -39,7 +39,8 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {ClkIn} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLKin}]
+create_clock -name {CLK} -period 20.000 -waveform { 0.000 10.000 } [get_ports {CLK}]
+create_clock -name {DF_HZ:DF1|Clk_aux} -period 1.000 -waveform { 0.000 0.500 } [get_registers {DF_HZ:DF1|Clk_aux}]
 
 
 #**************************************************************
@@ -58,6 +59,22 @@ create_clock -name {ClkIn} -period 20.000 -waveform { 0.000 10.000 } [get_ports 
 # Set Clock Uncertainty
 #**************************************************************
 
+set_clock_uncertainty -rise_from [get_clocks {DF_HZ:DF1|Clk_aux}] -rise_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {DF_HZ:DF1|Clk_aux}] -fall_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {DF_HZ:DF1|Clk_aux}] -rise_to [get_clocks {CLK}]  0.030  
+set_clock_uncertainty -rise_from [get_clocks {DF_HZ:DF1|Clk_aux}] -fall_to [get_clocks {CLK}]  0.030  
+set_clock_uncertainty -fall_from [get_clocks {DF_HZ:DF1|Clk_aux}] -rise_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {DF_HZ:DF1|Clk_aux}] -fall_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {DF_HZ:DF1|Clk_aux}] -rise_to [get_clocks {CLK}]  0.030  
+set_clock_uncertainty -fall_from [get_clocks {DF_HZ:DF1|Clk_aux}] -fall_to [get_clocks {CLK}]  0.030  
+set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.030  
+set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.030  
+set_clock_uncertainty -rise_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}]  0.020  
+set_clock_uncertainty -rise_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.030  
+set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {DF_HZ:DF1|Clk_aux}]  0.030  
+set_clock_uncertainty -fall_from [get_clocks {CLK}] -rise_to [get_clocks {CLK}]  0.020  
+set_clock_uncertainty -fall_from [get_clocks {CLK}] -fall_to [get_clocks {CLK}]  0.020  
 
 
 #**************************************************************

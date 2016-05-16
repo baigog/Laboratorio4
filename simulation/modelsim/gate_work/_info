@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 dE:/Mega/Facultad/FPGA/Laboratorio4/simulation/modelsim
-Edf_hz
-Z1 w1462977141
+Edf_hz_pll
+Z1 w1463258611
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 9L7WOjalBLjVlJ:R>F9:13
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 zHe@=:>9cbU;4Xj]jOJ^60
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8prueba_generic_7_1200mv_85c_slow.vho
 Z11 Fprueba_generic_7_1200mv_85c_slow.vho
 l0
 L37
-V<I<mU2oAAXR<YJc?[O5JL3
-!s100 ohHEI:hPjjzc1[C[6?VMV0
+Vf7VJm1VIDa<C@Sz2DU:@?3
+!s100 km0BdDWMRe`4@;_C;i`O53
 Z12 OV;C;10.4b;61
 31
-Z13 !s110 1462977183
+Z13 !s110 1463258929
 !i10b 1
-Z14 !s108 1462977183.000000
+Z14 !s108 1463258928.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|prueba_generic_7_1200mv_85c_slow.vho|
 Z16 !s107 prueba_generic_7_1200mv_85c_slow.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 5 df_hz 0 22 <I<mU2oAAXR<YJc?[O5JL3
-l215
-L73
-VH1JiG2c72UbUTmnEon17]2
-!s100 <Wgb]QXVec4:mB__?8FNK2
+DEx4 work 9 df_hz_pll 0 22 f7VJm1VIDa<C@Sz2DU:@?3
+l181
+L79
+Vm_4>]C;mn@:@;doI9Dgb90
+!s100 ];]MIjYHm<PBnHVo;JC0f0
 R12
 31
 R13
@@ -59,42 +59,42 @@ R16
 !i113 1
 R17
 R18
-Edf_hz_tb
-Z19 w1462976209
+Edf_hz_pll_tb
+Z19 w1463258541
 R7
 R8
 R0
-Z20 8E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd
-Z21 FE:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd
+Z20 8E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd
+Z21 FE:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd
 l0
 L4
-VLgTEK_8k^5T5P]ETOodl_3
-!s100 mDkCDf[;Q^AI;QL[gEDE63
+Vgf:>:[^C6C_FL`=k8ThBh0
+!s100 <h`g^Qf0hTcH3OZ:XNR>V0
 R12
 31
 R13
 !i10b 1
-R14
-Z22 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd|
-Z23 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_TB.vhd|
+Z22 !s108 1463258929.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd|
+Z24 !s107 E:/Mega/Facultad/FPGA/Laboratorio4/DF_HZ_PLL_TB.vhd|
 !i113 1
 R17
 R18
 Atest
 R7
 R8
-DEx4 work 8 df_hz_tb 0 22 LgTEK_8k^5T5P]ETOodl_3
-l34
+DEx4 work 12 df_hz_pll_tb 0 22 gf:>:[^C6C_FL`=k8ThBh0
+l39
 L8
-V_TdXoN3bBA49AX:]:SIFL2
-!s100 cFj:g4lG9cPg^Z32HV`k;3
+V^`eRNTB??XM1B<47gKj`P1
+!s100 :_V2e5Iia7EQZDK1M[DHC2
 R12
 31
 R13
 !i10b 1
-R14
 R22
 R23
+R24
 !i113 1
 R17
 R18

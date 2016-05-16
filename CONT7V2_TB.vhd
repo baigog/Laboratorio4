@@ -1,6 +1,6 @@
 library ieee; 
 use ieee.std_logic_1164.all;
-
+--Test-Bench de CONT7V2
 entity CONT7V2_TB is
 end CONT7V2_TB;
 

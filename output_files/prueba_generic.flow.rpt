@@ -1,5 +1,5 @@
 Flow report for prueba_generic
-Fri May 13 11:52:50 2016
+Mon May 16 10:15:36 2016
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 13 11:52:50 2016       ;
+; Flow Status                        ; Successful - Mon May 16 10:15:36 2016       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; prueba_generic                              ;
-; Top-level Entity Name              ; DF_HZ_PLL                                   ;
+; Top-level Entity Name              ; CONT7V2                                     ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 80 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 74 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 52 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 52                                          ;
+; Total pins                         ; 12 / 529 ( 2 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/13/2016 11:52:36 ;
+; Start date & time ; 05/16/2016 10:14:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; prueba_generic      ;
 +-------------------+---------------------+
@@ -76,10 +76,10 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
 ; Assignment Name                      ; Value                                 ; Default Value  ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
-; COMPILER_SIGNATURE_ID                ; 23084203634910.146315115610760        ; --             ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 23084203634910.146340446918416        ; --             ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; CONT4_UPDOWN_TB ;
 ; EDA_DESIGN_INSTANCE_NAME             ; LFSR1                                 ; --             ; --          ; LFSR_4_TB       ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; DF_HZ_PLL_TB    ;
+; EDA_DESIGN_INSTANCE_NAME             ; DFPLL1                                ; --             ; --          ; DF_HZ_PLL_TB    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; DF1                                   ; --             ; --          ; DF_HZ_TB        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; PLL_TB          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --             ; --          ; CONT7V2_TB      ;
@@ -112,39 +112,51 @@ agreement for further details.
 ; MISC_FILE                            ; PLL/PLL.cmp                           ; --             ; --          ; --              ;
 ; MISC_FILE                            ; PLL/PLL.ppf                           ; --             ; --          ; --              ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --             ; --          ; --              ;
-; PARTITION_COLOR                      ; 16764057                              ; --             ; DF_HZ_PLL   ; Top             ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; DF_HZ_PLL   ; Top             ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; DF_HZ_PLL   ; Top             ;
+; PARTITION_COLOR                      ; 16764057                              ; --             ; CONT7V2     ; Top             ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --             ; CONT7V2     ; Top             ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --             ; CONT7V2     ; Top             ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --             ; --          ; --              ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --             ; --          ; --              ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --             ; --          ; --              ;
-; TOP_LEVEL_ENTITY                     ; DF_HZ_PLL                             ; prueba_generic ; --          ; --              ;
+; TOP_LEVEL_ENTITY                     ; CONT7V2                               ; prueba_generic ; --          ; --              ;
 +--------------------------------------+---------------------------------------+----------------+-------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:14     ; 1.0                     ; 857 MB              ; 00:00:34                           ;
-; Total                  ; 00:00:14     ; --                      ; --                  ; 00:00:34                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 854 MB              ; 00:00:39                           ;
+; Fitter                    ; 00:00:23     ; 1.0                     ; 1321 MB             ; 00:00:25                           ;
+; Assembler                 ; 00:00:06     ; 1.0                     ; 739 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 872 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 704 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:50     ; --                      ; --                  ; 00:01:14                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                     ;
-+------------------------+------------------+-----------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+------------------------+------------------+-----------+------------+----------------+
-; Analysis & Elaboration ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
-+------------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Gabriel          ; Windows 8 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c prueba_generic --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off Laboratorio4 -c prueba_generic
+quartus_fit --read_settings_files=off --write_settings_files=off Laboratorio4 -c prueba_generic
+quartus_asm --read_settings_files=off --write_settings_files=off Laboratorio4 -c prueba_generic
+quartus_sta Laboratorio4 -c prueba_generic
+quartus_eda --read_settings_files=off --write_settings_files=off Laboratorio4 -c prueba_generic
 
 
 

@@ -89,17 +89,19 @@ begin
 	if rising_edge(clkin) then
 		case SelFreq is
 			when "000" => 
-				prescaler <= to_unsigned(PS_600HZ,nbits+1);
+				prescaler <= to_unsigned(PS_01HZ,nbits+1);
 				display <= "00000001";
 			when "001" =>
-				prescaler <= to_unsigned(PS_400HZ,nbits+1);
+				prescaler <= to_unsigned(PS_05HZ,nbits+1);
 				display <= "00000101";
 			when "010" =>
-				prescaler <= to_unsigned(PS_300HZ,nbits+1);
+				prescaler <= to_unsigned(PS_1HZ,nbits+1);
 				display <= "00100000";
+			when "011" =>
+				prescaler <= to_unsigned(PS_2HZ,nbits+1);
 				display <= "01010000";
 			when others =>
-				prescaler <= to_unsigned(PS_1HZ,nbits+1);
+				prescaler <= to_unsigned(PS_5HZ,nbits+1);
 				display <= "00010000";
 		end case;
 	end if;
